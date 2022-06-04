@@ -1,0 +1,58 @@
+{
+	"$schema": "https://raw.githubusercontent.com/martinring/tmlanguage/master/tmlanguage.json",
+	"name": "MusOk Chart",
+	"patterns": [
+		{
+			"include": "#main"
+		},
+		{
+			"include": "#constants"
+		},
+		{
+			"include": "#comment"
+		}
+	],
+	"repository": {
+		"main": {
+			"patterns": [
+				{
+					"name": "entity.name.type.musokchart",
+					"match": "^(BM|ME|BP|WL|WR|LL|LC|LR|BU|BE|NF|CF|NT|NH|CT|CH)\\b"
+				},
+				{
+					"name": "variable.parameter.musokchart",
+					"match": "(?<=^BP )\\w+\\b"
+				},
+				{
+					"name": "variable.parameter.musokchart",
+					"match": "(?<=^BU ((?<= )-?\\d+(\\.\\d+)?\\b ){3})\\w+\\b"
+				},
+				{
+					"name": "keyword.other.musokchart",
+					"match": "\\b(UPS|CEN|FIX|ENE|N|S|E|L|R)\\b"
+				},
+				{
+					"name": "entity.name.function.musokchart",
+					"match": "^\\!.+"
+				}
+			]
+		},
+		"constants": {
+			"patterns": [
+				{
+					"name": "constant.numeric.musokchart",
+					"match": "(?<= )-?\\d+(\\.\\d+)?\\b"
+				}
+			]
+		},
+		"comment": {
+			"patterns": [
+				{
+					"name": "comment.line.double-slash.musokchart",
+					"match": "\\/\\/.*"
+				}
+			]
+		}
+	},
+	"scopeName": "source.chart"
+}

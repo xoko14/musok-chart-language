@@ -1,0 +1,25 @@
+{
+    "name": "musok-chart-language",
+    "displayName": "MusOk Chart Language",
+    "description": "Syntax highlighting for MusOk charts",
+    "version": "0.0.1",
+    "engines": {
+        "vscode": "^1.67.0"
+    },
+    "categories": [
+        "Programming Languages"
+    ],
+    "contributes": {
+        "languages": [{
+            "id": "musokchart",
+            "aliases": ["MusOk Chart", "musokchart"],
+            "extensions": [".chart",".mokch"],
+            "configuration": "./language-configuration.json"
+        }],
+        "grammars": [{
+            "language": "musokchart",
+            "scopeName": "source.chart",
+            "path": "./syntaxes/musokchart.tmLanguage.json"
+        }]
+    }
+}
