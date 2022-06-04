@@ -3,6 +3,7 @@
     "displayName": "MusOk Chart Language",
     "description": "Syntax highlighting for MusOk charts",
     "version": "0.0.1",
+    "publisher": "xoko14",
     "engines": {
         "vscode": "^1.67.0"
     },
